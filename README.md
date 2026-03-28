@@ -42,6 +42,9 @@ Kubernetes Cluster
    ▼
 Application Accessible to End Users
 ```
+
+![GitOps Workflow Architecture](./img/architecture.png)
+
 ---
 ## Technology Stack
 <table border="1">
@@ -151,6 +154,10 @@ kubectl apply -f kubernetes/
 ```
 ![](./img/Screenshot%20(353).png)
 
+Verify pods are running:
+
+![Pods Running](./img/pods-running.png)
+
 ---
 ### Step 3: Install ArgoCD
 Create namespace:
@@ -197,6 +204,10 @@ kubectl apply -f argocd/application.yaml
 ```
 ![](./img/Screenshot%20(350).png)
 
+ArgoCD UI showing the application synced and healthy:
+
+![ArgoCD UI - Application Synced](./img/agrocd-ui.png)
+
 ---
 ### Step 5: GitOps Workflow
 The deployment process follows GitOps principles:
@@ -235,6 +246,8 @@ git push
 ArgoCD will automatically detect the change and deploy the updated version.
 
 ![](./img/Screenshot%20(352).png)
+
+![GitOps Deployment v2 - Updated Application](./img/gitops-deployment-v2.png)
 
 ---
 ### Optional Enhancements
